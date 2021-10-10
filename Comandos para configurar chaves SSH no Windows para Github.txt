@@ -1,0 +1,21 @@
+# = Linha comentada
+# Criar chaves ssh C:\Desenvolvimento WEB\React\aula7\project-1
+ssh-keygen -t rsa -f "/c/Desenvolvimento WEB/React/aula7/project-1/.ssh/clodopkey" -C 'clodop@outlook.com'
+
+# TODA VEZ QUE fechar o terminal precisa executar isso
+eval "$(ssh-agent -s)"
+ssh-add /c/Desenvolvimento WEB/React/aula7/project-1/.ssh/clodopkey
+
+# Iniciando o git
+git init
+git config --global user.name "clodop"
+git config --global user.email "clodop@outlook.com"
+#git remote add origin git@github.com:CAMINHO-COPIADO-DO-GITHUB-SSH
+git remote add origin git@github.com:git@github.com:Clodop/react-aula7.git
+
+# Editei
+git add .
+git commit -m 'MENSAGEM'
+git push origin master
+
+#  fim
